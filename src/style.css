@@ -1,0 +1,299 @@
+body{
+  font-family:poppin
+}
+
+section {
+  height: 650px;
+  background-color: white;
+}
+
+.hero {
+  background-color: white;
+  height: 100vh;
+  color: black;
+  font-size: 30px;
+}
+
+.welcome{
+  width: 500px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.welcome-container{
+  display: flex;
+  align-items: left;
+}
+
+footer {
+  background-color: rgb(120, 85, 157);
+  color: white;
+  text-align: center;
+  padding: 80px;
+}
+/* to style nav bar, having content to the right and in line horizontal*/
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+ul{
+  display: flex;
+  list-style-type: none;
+  width: 500px;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+ul.show {
+  display: block;
+}
+
+li{
+  text-decoration: none;
+}
+
+h1{
+  font-size: 90px;
+  margin: 0;
+}
+
+h2{
+  font-size: 70px;
+}
+
+p{
+  margin: 0;
+  font-size: 30px;
+}
+
+.subtext {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.hero-area{
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text{
+  margin-left: 80px;
+  margin-bottom: 200px;
+}
+
+.button{
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: coral;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 100;
+  padding-top: 5px;
+  margin-top: 20px;
+}
+
+.button:hover{
+  background-color: #ef744b;
+}
+
+.button:active{
+  background-color: #A9A9A9;
+  color: #808080;
+}
+
+.socials {
+  padding-bottom: 200px;
+  display: flex;
+}
+
+.logo{
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.social{
+  margin: 20px;
+  color: black;
+}
+
+.sub-section{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+/* projects */
+.sub-section-alternative {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.subtext {
+  font-size: 18px;
+}
+
+.headshot{
+  width: 400px;
+  height: 300px;
+  border-radius: 100px;
+}
+
+.headshot-container{
+  display: flex;
+  align-items: center;
+}
+
+.project-card{
+  width: 250px;
+  height: 400px;
+  box-shadow: 5px 5px 20px rgb(197, 195, 195);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.project-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 100px) {
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.project-image {
+  width: 150px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+hr {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.project-link {
+  text-decoration:none;
+  color: #ef744b;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.hamburger {
+  display:flex;
+}
+
+.hamburger:focus {
+  outline: 0;
+}
+
+@media only screen and (max-width: 100px) {
+  .hamburger {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 50px;
+    margin: 20px;
+    align-self: flex-end;
+  }
+}
+
+.ul {
+  display: none;
+  background-color:#2b2c38;
+  margin: 0px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color:#434560;
+  height: 80px;
+}
+
+.contact {
+  background: #070707;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+  grid-gap: 6rem;
+}
+
+.contact-form h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+span {
+  color: #f9004d;
+}
+
+.contact-form form {
+  position: relative;
+}
+
+.contact-form form input, form textarea{
+  width: 100%;
+  padding: 17px;
+  border: none;
+  outline: none;
+  background: #a574e7;
+  columns: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 10px;
+}
+
+.contact-form textarea{
+  resize: none;
+  height: 200px;
+}
+
+.contact-form form .btn{
+  display: inline-block;
+  background: #f9004d;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  width: 220px;
+  transition: ease .20s;
+  cursor: pointer;
+}
+
+.contact-form form .btn:hover{
+  border: 2px solid #f9004d;
+  background: transparent;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+@media (max-width: 1570px){
+  section{
+    padding: 80px 3%;
+    transition: .2s;
+  }
+}
+
+.contact-img img {
+      max-width: 100%;
+      width: 500px;
+      height: 700px;
+      border-radius: 50%;
+}
