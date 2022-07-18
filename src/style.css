@@ -1,10 +1,15 @@
 body{
-  font-family:poppin
+  font-family:poppin;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 section {
-  height: 650px;
+  height: 100%;
   background-color: white;
+  padding: 0 3rem;
 }
 
 .hero {
@@ -12,10 +17,11 @@ section {
   height: 100vh;
   color: black;
   font-size: 30px;
+  padding: 0;
 }
 
 .welcome{
-  width: 500px;
+  width: 300px;
   border-radius: 20px;
   padding: 10px;
 }
@@ -23,11 +29,14 @@ section {
 .welcome-container{
   display: flex;
   align-items: left;
+  max-width: 100%;
+  height: auto;
+  flex-wrap: wrap;
 }
 
 footer {
-  background-color: rgb(120, 85, 157);
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(182, 127, 226);
   text-align: center;
   padding: 80px;
 }
@@ -35,36 +44,38 @@ footer {
 nav{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 ul{
   display: flex;
   list-style-type: none;
-  width: 500px;
+  width:fit-content;
   justify-content: space-around;
-  font-size: 20px;
-}
-
-ul.show {
-  display: block;
+  font-size: 30px;
+  padding-left: 0;
 }
 
 li{
   text-decoration: none;
+  list-style-type: none;
 }
 
 h1{
-  font-size: 90px;
   margin: 0;
+  max-width: 100%;
+  height: auto;
 }
 
 h2{
   font-size: 70px;
+  max-width: 100%;
+  height: auto;
 }
 
 p{
   margin: 0;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .subtext {
@@ -75,11 +86,13 @@ p{
 .hero-area{
   display: flex;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
+  margin-right: 0;
 }
 
-.hero-text{
+.hero-text {
   margin-left: 80px;
   margin-bottom: 200px;
 }
@@ -110,13 +123,6 @@ p{
   display: flex;
 }
 
-.logo{
-  width: 150px;
-  height: 150px;
-  margin: 10px;
-  border-radius: 50%;
-}
-
 .social{
   margin: 20px;
   color: black;
@@ -125,9 +131,13 @@ p{
 .sub-section{
   display: flex;
   justify-content: space-around;
-  padding: 20px;
+  padding: 20px 40px;
+  flex-wrap: wrap;
 }
 /* projects */
+#projects{
+  flex-wrap: nowrap;
+}
 .sub-section-alternative {
   display: flex;
   flex-direction: column;
@@ -159,6 +169,8 @@ p{
 .project-container{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+
 }
 
 @media only screen and (max-width: 100px) {
@@ -172,6 +184,9 @@ p{
   width: 150px;
   border-radius: 20px;
   margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 hr {
@@ -196,8 +211,8 @@ a {
 .hamburger:focus {
   outline: 0;
 }
-
-@media only screen and (max-width: 100px) {
+/* This is so that hamburger can only be viewed with a certain width */
+@media only screen and (max-width: 3000px) {
   .hamburger {
     display: block;
     border: 0;
@@ -205,21 +220,31 @@ a {
     color: white;
     font-size: 50px;
     margin: 20px;
+    height: 130px;
     align-self: flex-end;
   }
 }
-
-.ul {
+ul {
   display: none;
   background-color:#2b2c38;
   margin: 0px;
+  position: absolute;
+  top: 45px;
+  right: 0;
+}
+
+ul.show {
+  display: block;
+  margin-top: 30px;
 }
 
 nav {
+  align-items: flex-end;
   display: flex;
   flex-direction: column-reverse;
-  background-color:#434560;
+  background-color:#2b2c38;;
   height: 80px;
+  position: relative;
 }
 
 .contact {
@@ -231,6 +256,13 @@ nav {
   grid-template-columns: repeat(2, 2fr);
   align-items: center;
   grid-gap: 6rem;
+}
+@media (max-width:670px){
+  .contact{
+    grid-template-columns: repeat(1,1fr);
+    padding: 1rem;
+  }
+
 }
 
 .contact-form h2 {
@@ -247,9 +279,10 @@ span {
 }
 
 .contact-form form input, form textarea{
-  width: 100%;
+  width: 70%;
   padding: 17px;
   border: none;
+  margin: 0;
   outline: none;
   background: #a574e7;
   columns: #fff;
@@ -258,12 +291,12 @@ span {
   border-radius: 10px;
 }
 
-.contact-form textarea{
+/* .contact-form textarea{
   resize: none;
   height: 200px;
-}
+} */
 
-.contact-form form .btn{
+/* .contact-form form .btn{
   display: inline-block;
   background: #f9004d;
   font-size: 10px;
@@ -271,18 +304,18 @@ span {
   text-transform: uppercase;
   font-weight: 600;
   border: 2px solid transparent;
-  border-radius: 10px;
+  border-radius: 30px;
   width: 220px;
   transition: ease .20s;
   cursor: pointer;
-}
+} */
 
-.contact-form form .btn:hover{
+/* .contact-form form .btn:hover{
   border: 2px solid #f9004d;
   background: transparent;
   transform: scale(1.1);
   color: #fff;
-}
+} */
 
 @media (max-width: 1570px){
   section{
@@ -293,7 +326,12 @@ span {
 
 .contact-img img {
       max-width: 100%;
-      width: 500px;
-      height: 700px;
+      height: auto;
       border-radius: 50%;
+      display: flex;
+      flex-wrap: wrap;
+}
+
+#about-me {
+  height: 100%;
 }
